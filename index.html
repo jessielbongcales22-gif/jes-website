@@ -3,87 +3,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bongcales_Jessiel_Mae.HTMLLab1</title>
-    <link rel="stylesheet" href ="bongcales.css">
+    <title>Semantic HTML Page</title>
+    <style>
+        /* Tag selectors */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
 
+        h1, h2, h3 {
+            margin: 0;
+            padding: 10px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        /* ID selectors */
+        #main-header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #main-nav {
+            background-color: #444;
+            padding: 10px;
+        }
+
+        #main-section {
+            display: flex;
+            padding: 20px;
+        }
+
+        #main-article {
+            flex: 2;
+            background-color: #fff;
+            padding: 20px;
+            margin-right: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        #sidebar {
+            flex: 1;
+            background-color: #e9e9e9;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        #main-footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Class selectors */
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 5px 10px;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-link:hover {
+            background-color: #555;
+        }
+
+        .highlight {
+            background-color: #ffff99;
+            padding: 5px;
+            border-left: 4px solid #ffcc00;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* JavaScript element styles */
+        .js-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .js-button:hover {
+            background-color: #45a049;
+        }
+
+        .js-input {
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            width: 200px;
+        }
+
+        #input-display {
+            font-weight: bold;
+            color: #2E8B57;
+            margin-top: 10px;
+        }
+
+        #dynamic-content {
+            background-color: #f0f8ff;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+    </style>
 </head>
 <body>
+    <header id="main-header">
+        <h1>Welcome to My Website</h1>
+        <p>Your source for amazing content</p>
+    </header>
 
-    <!-- HTML Comment (Task 1) -->
-    <!-- This is a sample HTML comment -->
+    <nav id="main-nav">
+        <a href="#" class="nav-link">Home</a>
+        <a href="#" class="nav-link">About</a>
+        <a href="#" class="nav-link">Services</a>
+        <a href="#" class="nav-link">Contact</a>
+    </nav>
 
-    <!-- Heading (Task 1) -->
-<h1>Laboratory Activity No. 1: Introduction to HTML5 Basics</h1>
+    <section id="main-section">
+        <article id="main-article">
+            <h2>Main Article Title</h2>
+            <p class="highlight">This is a highlighted paragraph with special styling.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="card">
+                <h3>Card Title</h3>
+                <p>This is content inside a card with custom styling.</p>
+            </div>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-    <!-- Paragraph (Task 1) -->
-    <p>This webpage demonstrates basic HTML5 elements including lists, links, images, tables, and JavaScript.</p>
+            <!-- JavaScript Interactive Elements -->
+            <div class="card">
+                <h3>JavaScript Features</h3>
 
-    <!-- Task 2: Unordered List -->
-    <h2>Unordered List</h2>
-    <ul>
-        <li>Basic HTML5 Structure</li>
-        <li>Common HTML Elements (Headings, Paragraphs, Links)</li>
-        <li>Semantic Elements (e.g., &lt;header&gt;, &lt;section&gt;)</li>
-    </ul>
+                <!-- A. Variables and Output -->
+                <div id="student-info">
+                    <h4>A. Variables and Output</h4>
+                    <p id="display-info">Loading student information...</p>
+                </div>
 
-    <h2>Ordered List</h2>
-    <ol>
-        <li>Creating an HTML5 Document</li>
-        <li>Adding Images, Lists, and Tables</li>
-        <li>Applying JavaScript for Interactivity</li>
-    </ol>
+                <!-- B. Button Function -->
+                <div>
+                    <h4>B. Button Function</h4>
+                    <button id="alert-button" class="js-button">Click me for Alert!</button>
+                </div>
 
+                <!-- C. User Input -->
+                <div>
+                    <h4>C. User Input</h4>
+                    <input type="text" id="user-input" placeholder="Type something here..." class="js-input">
+                    <p id="input-display">Your input will appear here dynamically</p>
+                </div>
 
-    <!-- Task 2: Hyperlink -->
-    <h2>External Link</h2>
-    <p>
-        Learn more about HTML5 at
-        <a href="https://www.w3schools.com/html/" target="_blank">
-            W3Schools HTML Tutorial
-        </a>
-    </p>
+                <!-- D. Event Handling -->
+                <div>
+                    <h4>D. Event Handling</h4>
+                    <button id="change-content-btn" class="js-button">Change Content</button>
+                    <p id="dynamic-content">This content can be changed dynamically!</p>
+                </div>
+            </div>
+        </article>
 
-    <!-- Task 2: Image -->
-    <h2>Image</h2>
-    <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png" alt="HTML Sample Image" width="180" height="150">
+        <aside id="sidebar">
+            <h3>Sidebar</h3>
+            <div class="card">
+                <h4>Recent Posts</h4>
+                <ul>
+                    <li><a href="#">Post 1</a></li>
+                    <li><a href="#">Post 2</a></li>
+                    <li><a href="#">Post 3</a></li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="#">Technology</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Business</a></li>
+                </ul>
+            </div>
+        </aside>
+    </section>
 
-    <!-- Task 3: Table -->
-    <h2>Student Information</h2>
-    <table border="1" cellpadding="8">
-        <tr>
-            <th>Name</th>
-            <th>Course</th>
-            <th>Year Level</th>
-        </tr>
-        <tr>
-            <td>Nieves Solanna Galvez</td>
-            <td>B.S. in Information Technology</td>
-            <td>1st Year</td>
-        </tr>
-        <tr>
-            <td>Jaxon Archibald Riego</td>
-            <td>B.S. in Computer Science</td>
-            <td>2nd Year</td>
-        </tr>
-        <tr>
-            <td>Zarrick Amiel Mercadejas</td>
-            <td>B.S in Information Technology</td>
-            <td>3rd Year</td>
-        </tr>
-        <tr>
-            <td>Percival Archer Riego</td>
-            <td>B.S. in Web & Digital Design</td>
-            <td>4th Year</td>
-        </tr>
-    
-    </table>
+    <footer id="main-footer">
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+        <p>Contact us at <a href="mailto:info@example.com" style="color: #fff;">info@example.com</a></p>
+    </footer>
 
-    <!-- JavaScript Alert (Task 4) -->
     <script>
-        window.onload = function() {
-            alert("Hello World");
-        };
-    </script>
+        // A. Variables and Output – Display name and course
+        const studentName = "Jessiel Mae Bongcales";
+        const course = "Web Development";
+        document.getElementById('display-info').textContent = `Name: ${studentName} | Course: ${course}`;
 
+        // B. Button Function – Show alert on click
+        document.getElementById('alert-button').addEventListener('click', function() {
+            alert('Hello! This is an alert from JavaScript!');
+        });
+
+        // C. User Input – Display input dynamically
+        document.getElementById('user-input').addEventListener('input', function() {
+            const inputValue = this.value;
+            document.getElementById('input-display').textContent = inputValue || 'Your input will appear here dynamically';
+        });
+
+        // D. Event Handling – Change content dynamically
+        document.getElementById('change-content-btn').addEventListener('click', function() {
+            const dynamicContent = document.getElementById('dynamic-content');
+            const colors = ['#f0f8ff', '#fffacd', '#f0fff0', '#fff0f5', '#f5f5f5'];
+            const messages = [
+                'Content changed! 🌟',
+                'Dynamic update successful! ✨',
+                'JavaScript in action! 🚀',
+                'Event handled perfectly! 🎯',
+                'Interactive content updated! 💫'
+            ];
+
+            // Random color and message
+            const randomIndex = Math.floor(Math.random() * colors.length);
+            dynamicContent.style.backgroundColor = colors[randomIndex];
+            dynamicContent.textContent = messages[randomIndex];
+        });
+    </script>
 </body>
 </html>
